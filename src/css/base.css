@@ -49,7 +49,7 @@ input {
   padding: 36px 0 48px;
 }
 
-.search-form {
+.form {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -184,7 +184,7 @@ input {
     width: min(100% - 32px, 480px);
   }
 
-  .search-form {
+  .form {
     flex-direction: column;
     align-items: center;
   }
