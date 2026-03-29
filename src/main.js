@@ -62,9 +62,17 @@ async function handleSearchSubmit(event) {
 
     createGallery(data.hits);
 
-    if (totalHits > PER_PAGE) {
-      showLoadMoreButton();
+    if (totalHits <= PER_PAGE) {
+      iziToast.show({
+        message: "We're sorry, but you've reached the end of search results.",
+        messageColor: '#fff',
+        backgroundColor: '#ef4040',
+        position: 'topRight',
+      });
+      return;
     }
+
+    showLoadMoreButton();
   } catch (error) {
     iziToast.show({
       message: 'Something went wrong. Please try again later.',
